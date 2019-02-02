@@ -1,10 +1,9 @@
-<ion-header>
   <ion-navbar>
     <ion-title>QR Code</ion-title>
   </ion-navbar>
-</ion-header>
 
-<ion-content padding>
+
+  <ion-content padding>
   <ion-item>
     <ion-input type="text" placeholder="Enter QR-Code" [(ngModel)]="qrData"></ion-input>
   </ion-item>
@@ -19,14 +18,10 @@
     <ngx-qrcode [qrc-value]="createdcode"></ngx-qrcode>
   </ion-card>
 
-
   <!--code-->
   <br />
   <ion-card *ngIf="scannedData.text">
     <h4>Barcode code : {{scannedData.text}}</h4>
   </ion-card>
   <!--end-->
-
-
-
 </ion-content>
