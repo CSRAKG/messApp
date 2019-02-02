@@ -22,10 +22,12 @@ export class HomePage {
   tab2Root = EventLogPage;
   tab3Root = QrCodePage;
 
-
-
-
   constructor(public navCtrl: NavController) {
+  }
+
+  logout(){
+    localStorage.clear();
+    this.navCtrl.push('LoginPage');
   }
 
   ionViewWillEnter() {
