@@ -41,7 +41,6 @@ export class LoginPage {
   // function to authenticate the user logined
   signIn() {
     if (localStorage.getItem('authencation') == 'ne' || localStorage.getItem('authencation') == 'wp') {
-      this.navCtrl.push('LoginPage');
     } if(true) {
       const url = 'https://www.dron.limited/digimess/appapi/BasicInfo/FetchLoginUser.php';
       const data1 = new FormData();
