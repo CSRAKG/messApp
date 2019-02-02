@@ -13,13 +13,10 @@
   <button ion-button full (click)="scan()">
     <ion-icon name="qr-scanner"></ion-icon>
   </button>
-  <img *ngIf="createdcode" src="../../assets/imgs/icon.png" alt="icon not found" height="50px" width="50px">
-  <ion-card *ngIf="createdcode">
-    <ngx-qrcode [qrc-value]="createdcode"></ngx-qrcode>
-  </ion-card>
-
-  <!--code-->
-  <br />
+   <ion-card *ngIf="createdcode">
+    <ngx-qrcode [qrc-value]="createdcode" ></ngx-qrcode>
+   </ion-card>
+   <br />
   <ion-card *ngIf="scannedData.text">
     <h4>Barcode code : {{scannedData.text}}</h4>
   </ion-card>

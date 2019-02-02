@@ -46,6 +46,6 @@ import { ZXingScannerModule } from '@zxing/ngx-scanner';
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     ApiUserProvider,
     HttpClient,
-  ]
+   ]
 })
 export class AppModule { }

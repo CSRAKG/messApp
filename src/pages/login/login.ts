@@ -40,13 +40,14 @@ export class LoginPage {
 
   // function to authenticate the user logined
   signIn() {
-    const url = 'https://www.dron.limited/digimess/appapi/BasicInfo/FetchLoginUser.php';
+     const url = 'https://www.dron.limited/digimess/appapi/BasicInfo/FetchLoginUser.php';
     const data1 = new FormData();
     data1.append('username', this.user.value.name);
     data1.append('password', this.user.value.pass);
     this.http.post(url, data1)
       .subscribe(data => {
         this.response = data['_body'];
+
         localStorage.setItem('authencation', this.response);
         console.log(this.response);
         this.navCtrl.setRoot(HomePage);

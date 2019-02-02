@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController } from 'ionic-angular';
+import {AlertController, IonicPage, NavController} from 'ionic-angular';
 import { MenuPage } from "../menu/menu";
 import { EventLogPage } from "../event-log/event-log";
 import { QrCodePage } from "../qr-code/qr-code";
@@ -25,8 +25,14 @@ export class HomePage {
 
 
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, private alert : AlertController
+  ) {
   }
+
+  logout(){
+
+  }
+
 
   ionViewWillEnter() {
   }
