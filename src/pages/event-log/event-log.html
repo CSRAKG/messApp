@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Event</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<!--Page Data-->
+<ion-item>
+  <ion-label>{{response}}</ion-label>
+</ion-item>
+<button ion-button (click)="event()"></button>
+<!--end-->
+
+<ion-content padding>
+
+  <!--code-->
+  <!-- List of Text Items -->
+  <ion-list>
+    <ion-item *ngFor="let item of str">
+      <ion-card-content>
+        <b>Event Id :</b> {{item.event_id}}<br />
+        <b>Event :</b> {{item.event}}<br />
+        <b>Start :</b> {{item.start}}<br />
+        <button ion-button round small color="primary" (click)="openModal(item.event_id,item.event,item.start)">Edit</button><br />
+      </ion-card-content>
+    </ion-item>
+  </ion-list>
+  <!--end-->
+
+
+</ion-content>

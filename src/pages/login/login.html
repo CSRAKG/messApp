@@ -1,0 +1,38 @@
+<ion-content padding class="transparent-header">
+  <div padding>
+    <ion-row>
+      <ion-col>
+        <ion-list inset class="no-border">
+          <form novalidate [formGroup]="user">
+            <ion-item>
+              <ion-label floating>Username</ion-label>
+              <ion-input type="text" #username formControlName="name"></ion-input>
+            </ion-item>
+            <ion-item no-lines *ngIf=" user.get('name').hasError('required')  && user.get('name').touched">
+              <div height="5px" class="error" *ngIf="user.get('name').hasError('required') && user.get('name').touched">
+                <small>Username is required</small>
+              </div>
+            </ion-item>
+            <ion-item>
+              <ion-label floating>Password</ion-label>
+              <ion-input type="password" #password formControlName="pass"></ion-input>
+            </ion-item>
+            <ion-item no-lines *ngIf=" user.get('pass').hasError('required') && user.get('pass').touched">
+              <div class="error" *ngIf="user.get('pass').hasError('required') && user.get('pass').touched">
+                <small>Password is required</small>
+              </div>
+              <div class="error" *ngIf=" user.get('pass').touched">
+                <small>Password must be atleast 6 character long</small>
+              </div>
+            </ion-item>
+          </form>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <button ion-button round class="login-button" (click)="signIn()"><span class="textColor">Login</span></button>
+      </ion-col>
+    </ion-row>
+  </div>
+</ion-content>
