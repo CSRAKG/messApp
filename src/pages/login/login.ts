@@ -20,8 +20,9 @@ export class LoginPage {
 
   constructor(private alertCtrl: AlertController, public navCtrl: NavController, public navParams: NavParams,
     public toastCtrl: ToastController, private http: Http) {
+    
   }
-
+ 
   alert(message: string) {
     this.alertCtrl.create({
       title: 'Error',

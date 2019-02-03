@@ -10,17 +10,20 @@
 
   <!--code-->
   <!-- List of Text Items -->
-  <ion-list>
-    <ion-item *ngFor="let item of str">
-      <ion-card-content>
-        <b>Day :</b> {{item.day}}<br/>
-        <b>Day Name :</b> {{item.dayname}}<br/>
-        <b>Breakfast :</b> {{item.Breakfast}}<br/>
-        <b>Lunch :</b> {{item.Lunch}}<br/>
-        <b>Sancks :</b> {{item.Snacks}}<br/>
-        <b>Dinner :</b> {{item.Dinner}}<br/>
-      </ion-card-content>
-    </ion-item>
-  </ion-list>
+
+  <ion-slides pager="true" options="flip">
+    <ion-slide *ngFor="let item of str">
+        <ion-card-content>
+          <b>Day :</b> {{item.day}}<br/>
+          <b>Day Name :</b> {{item.dayname}}<br/>
+          <b>Breakfast :</b> {{item.Breakfast}}<br/>
+          <b>Lunch :</b> {{item.Lunch}}<br/>
+          <b>Sancks :</b> {{item.Snacks}}<br/>
+          <b>Dinner :</b> {{item.Dinner}}<br/>
+        </ion-card-content>
+    </ion-slide>
+  </ion-slides>
+
   <!--end-->
+
 </ion-content>
