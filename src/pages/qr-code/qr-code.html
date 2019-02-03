@@ -1,24 +1,29 @@
-  <ion-navbar>
-    <ion-title>QR Code</ion-title>
-  </ion-navbar>
+<ion-header>
+  <ion-buttons right>
+    <button small round color="primary" ion-button icon-only menuToggle>
+      <ion-icon name='log-out'></ion-icon>
+    </button>
+  </ion-buttons>
+</ion-header>
 
 
-  <ion-content padding>
+<ion-content padding>
   <ion-item>
     <ion-input type="text" placeholder="Enter QR-Code" [(ngModel)]="qrData"></ion-input>
   </ion-item>
-  <button ion-button full (click)="createCode()">
+  <button round ion-button full (click)="createCode()">
     <ion-icon name="barcode"></ion-icon>
   </button>
-  <button ion-button full (click)="scan()">
+  <button round ion-button full (click)="scan()">
     <ion-icon name="qr-scanner"></ion-icon>
   </button>
-   <ion-card *ngIf="createdcode">
+    <ion-card *ngIf="createdcode">
     <ngx-qrcode [qrc-value]="createdcode" ></ngx-qrcode>
    </ion-card>
    <br />
-  <ion-card *ngIf="scannedData.text">
+
+   <ion-card *ngIf="scannedData.text">
     <h4>Barcode code : {{scannedData.text}}</h4>
   </ion-card>
-  <!--end-->
+   <img class="shift" *ngIf="createdcode" src="../../assets/imgs/icon.png" alt="icon not found" height="50px" width="50px">
 </ion-content>

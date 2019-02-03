@@ -1,22 +1,29 @@
-  <ion-navbar>
-    <ion-title>Menu</ion-title>
-  </ion-navbar>
+<ion-header>
+    <ion-buttons right>
+     <button small round color="primary" ion-button icon-only menuToggle>
+       <ion-icon name='log-out'></ion-icon>
+     </button>
+   </ion-buttons>
+ </ion-header>
 
 <ion-content padding>
 
   <!--code-->
   <!-- List of Text Items -->
-  <ion-list>
-    <ion-item *ngFor="let item of str">
-      <ion-card-content>
-        <b>Day :</b> {{item.day}}<br/>
-        <b>Day Name :</b> {{item.dayname}}<br/>
-        <b>Breakfast :</b> {{item.Breakfast}}<br/>
-        <b>Lunch :</b> {{item.Lunch}}<br/>
-        <b>Sancks :</b> {{item.Snacks}}<br/>
-        <b>Dinner :</b> {{item.Dinner}}<br/>
-      </ion-card-content>
-    </ion-item>
-  </ion-list>
+
+  <ion-slides pager="true" options="flip">
+    <ion-slide *ngFor="let item of str">
+        <ion-card-content>
+          <b>Day :</b> {{item.day}}<br/>
+          <b>Day Name :</b> {{item.dayname}}<br/>
+          <b>Breakfast :</b> {{item.Breakfast}}<br/>
+          <b>Lunch :</b> {{item.Lunch}}<br/>
+          <b>Sancks :</b> {{item.Snacks}}<br/>
+          <b>Dinner :</b> {{item.Dinner}}<br/>
+        </ion-card-content>
+    </ion-slide>
+  </ion-slides>
+
   <!--end-->
+
 </ion-content>

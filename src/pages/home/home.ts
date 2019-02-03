@@ -23,18 +23,15 @@ export class HomePage {
   tab3Root = QrCodePage;
 
 
-
-
-  constructor(public navCtrl: NavController, private alert : AlertController
-  ) {
+  constructor(public navCtrl: NavController) {
   }
 
   logout(){
-
+    localStorage.clear();
+    this.navCtrl.push('LoginPage');
   }
 
-
-  ionViewWillEnter() {
+   ionViewWillEnter() {
   }
 
 
