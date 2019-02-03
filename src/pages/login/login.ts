@@ -23,7 +23,7 @@ export class LoginPage {
     public toastCtrl: ToastController, private http: Http) {
     if (localStorage.getItem('authencation') != 'ne' || localStorage.getItem('authencation') != 'wp' ||
       localStorage.getItem('authencation') != '' ) {
-      if(localStorage.getItem('authencation') == null)
+      if(localStorage.getItem('authencation') != null)
       // Login if local storage value found
       this.navCtrl.setRoot(HomePage);
     }
